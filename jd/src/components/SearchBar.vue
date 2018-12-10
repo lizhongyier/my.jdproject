@@ -5,22 +5,32 @@
 			<span class="fa fa-th-list"></span>
 		</div>
 		<div class="search weui-flex__item">
-			<input type="search" placeholder="请输入搜索内容"/>
+			<input type="search" placeholder="请输入搜索内容" @focus="show=true"/>
 		</div>
 		<div class="user">
 			<span class="fa fa-user"></span>
 		</div>
+		<search-page v-model="show"></search-page>
 	</div>
 
 </template>
 <script>
+	import SearchPage from "@/components/SearchPage.vue"
+	
+	
 	export default{
+		components:{
+			SearchPage
+		},
 		data(){
 			return{
 				fixed:false
+				show:false
 			};
 		},
-		methods:{},
+		methods:{
+			
+		},
 		watch:{},
 		computed:{},
 		created () {
@@ -35,7 +45,7 @@
 				} else {
 					self.fixed = false;
 				}
-				console.log(scrollTop)
+//				console.log(scrollTop)
 			});
 
 		}

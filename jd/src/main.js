@@ -8,6 +8,10 @@ import "./assets/css/swiper.css"
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+
+//设置服务器地址
+Vue.prototype.serveRoot="http://192.168.255.113:8888"
+
 Vue.use(ElementUI)
 import 'bootstrap/dist/css/bootstrap.min.css'
 

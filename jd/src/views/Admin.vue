@@ -43,11 +43,12 @@
 	}
 	.admin aside{
 		width: 260px;
-		height: 2000px;
+		height: 100%;
 		position: fixed;
 		z-index: 9999;
 		top: 80px;
 		left: 0px;
+		overflow-y: auto;
 		box-sizing: border-box;
 		background-color: #f23030;
 	}

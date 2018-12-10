@@ -1,0 +1,85 @@
+<template>
+	<div class="sear-mask" v-show="show">
+		<header class="top-bar weui-flex">
+		<div class="go_back">
+				<a href="#" @click.prevent="hide"><i class="fa fa-angle-left"></i> </a>
+			</div>
+			<div class="search weui-flex__item">
+			<input type="search" placeholder="请输入搜索内容"/>
+			</div>
+			<div class="menu" style="width: 60px;">
+				<a>搜索</a>
+			</div>	
+		</header>
+	</div>
+	
+</template>
+
+<script>
+	
+	export default{
+		data(){
+			return{
+				show:false
+			}
+		},
+		props:["value"],
+		created(){
+			this.show=this.value
+		},
+		watch:{
+			value(val){
+				this.show=val;
+				if (val) {
+					document.body.style.overflow="hidden"
+				} else{
+					document.body.style.overflow="auto"
+				}
+			}
+		},
+		methods:{
+			hide(){
+				this.show=false;
+				this.$emit("input",false);
+				document.body.style.overflow="auto";
+			}
+		}
+	}
+	
+</script>
+
+<style>
+	.sear-mask{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+	}
+	.sear-mask .top-bar .search{
+		padding-top: 7px;
+	}
+	.sear-mask .top-bar input {
+		width: 100%;
+		height: 30px;
+		border-radius: 15px;
+		border: solid 1px #CCCCCC;
+		outline: none;
+		padding-left: 40px;
+		background-color: #EEEEEE;
+		box-sizing: border-box;
+	}
+	.sear-mask .top-bar .menu a {
+		position: static;
+		padding: 6px;
+		box-sizing: border-box;
+		background-color: #e93b3d;
+		color: #fff;
+		border-radius: 4px;
+		font-size: 14px;
+		line-height: 44px;
+	}
+	
+	
+	
+</style>
