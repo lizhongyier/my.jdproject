@@ -1,13 +1,13 @@
 <template>
 	<div class="sear-mask" v-show="show">
 		<header class="top-bar weui-flex">
-		<div class="go_back">
+			<div class="go_back">
 				<a href="#" @click.prevent="hide"><i class="fa fa-angle-left"></i> </a>
 			</div>
 			<div class="search weui-flex__item">
 			<input type="search" placeholder="请输入搜索内容"/>
 			</div>
-			<div class="menu" style="width: 60px;">
+			<div class="menu" style="width: 60px; margin: 0 8px;">
 				<a>搜索</a>
 			</div>	
 		</header>
@@ -50,11 +50,19 @@
 
 <style>
 	.sear-mask{
+		height: 100%;
+		width: 100%;
 		position: fixed;
 		top: 0px;
 		left: 0px;
 		right: 0px;
 		bottom: 0px;
+		z-index: 999;
+		background-color: #FFFFFF;
+	}
+	.sear-mask .go_back i{
+		padding: 15px;
+		font-size: 20px;
 	}
 	.sear-mask .top-bar .search{
 		padding-top: 7px;

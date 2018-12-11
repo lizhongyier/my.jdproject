@@ -24,7 +24,7 @@
 		},
 		data(){
 			return{
-				fixed:false
+				fixed:false,
 				show:false
 			};
 		},

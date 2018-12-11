@@ -29,6 +29,7 @@ import Countbind from './components/Countbind.vue'
 import AfterSale from './components/AfterSale.vue'
 import Address from './components/Address.vue'
 import Manngepass from './components/Manngepass.vue'
+import Prolist from './views/Prolist.vue'
 
 Vue.use(Router)
 
@@ -59,6 +60,11 @@ const router = new Router({
 			path: '/user',
 			name: 'user',
 			component: User
+		},
+		{
+			path: '/prolist',
+			name: 'prolist',
+			component: Prolist
 		},
 
 		{

@@ -1,7 +1,7 @@
 <template>
 	<div class="product_box">
 	<div class="product" v-for="(item,index) in products">
-	<a :href="'/product?id='+id">
+	<a href="#">
 		<div class="product-image" ><img :src="item.image"></div>
 		<div class="product-title" v-text="item.title"></div>
 		<div class="product-info">
@@ -23,32 +23,32 @@
 						title: '南方（精装）600g 黑芝麻糊 冲饮谷物 营养早餐  即食 黑芝麻糊',
 						image: '/img2/2.jpg',
 						price: 27.99,
-						id: 2
+//						id: 2
 					}, {
 						title: '满199减120_百草味 芒果干120g 休闲零食水果干小吃蜜饯果脯 MJ',
 						image: '/img2/1.jpg',
 						price: 25,
-						id: 1
+//						id: 1
 					}, {
 						title: '南方（精装）600g 黑芝麻糊 冲饮谷物 营养早餐  即食 黑芝麻糊',
 						image: '/img2/2.jpg',
 						price: 27.99,
-						id: 2
+//						id: 2
 					}, {
 						title: '满199减120_百草味 芒果干120g 休闲零食水果干小吃蜜饯果脯 MJ',
 						image: '/img2/1.jpg',
 						price: 25,
-						id: 1
+//						id: 1
 					}, {
 						title: '南方（精装）600g 黑芝麻糊 冲饮谷物 营养早餐  即食 黑芝麻糊',
 						image: '/img2/2.jpg',
 						price: 27.99,
-						id: 2
+//						id: 2
 					}, {
 						title: '满199减120_百草味 芒果干120g 休闲零食水果干小吃蜜饯果脯 MJ',
 						image: '/img2/1.jpg',
 						price: 25,
-						id: 1
+//						id: 1
 					}]
 			}
 
