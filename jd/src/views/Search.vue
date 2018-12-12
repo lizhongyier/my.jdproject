@@ -1,10 +1,15 @@
 <template>
 	<div class="box">
-		<input type="text" name="" v-model="keyword" id="" value="" />
-		<button @click="search">搜索</button>
-		<div class="product_box">
+		<search-page v-model="show" @search="search"></search-page>
+		<input type="text" name="" v-model="keyword" id="" value="" @focus="show=true" />
+		<!--<button @click="search">搜索</button>-->
+		
+		
+		<product v-for="(item,index) in products" :id="item.id" :title="item.title" :image="item.image" :price="item.price"></product>
+		
+		<!--<div class="product_box">
 			<div class="product" v-for="(item,index) in products">
-				<a :href="'/product?id='+id">
+					<a :href="'/product?id='+id">
 					<div class="product-image"><img :src="item.image"></div>
 					<div class="product-title" v-text="item.title"></div>
 					<div class="product-info">
@@ -14,7 +19,7 @@
 					<div class="similar-info"></div>
 				</a>
 			</div>
-		</div>
+		</div>-->
 		<footerbar></footerbar>
 	</div>
 </template>
@@ -22,35 +27,74 @@
 <script>
 	import Footerbar from "@/components/Footerbar.vue";
 	import SearchBar from "@/components/SearchBar.vue";
-	import axios from"axios";
+	import SearchPage from "@/components/SearchPage.vue";
+	import Product from "@/components/SearchProduct.vue";
+	import axios from "axios";
+	import qs from "qs";
 	export default {
 		data() {
 			return {
 				keyword: '',
-				products: []
+				products: [],
+				show:false,
+				fixed: false,
+				
 			};
 		},
 		components: {
 			Footerbar,
+			SearchPage,
+			Product
 
 		},
 		created() {
+			
+			if(this.$route.params.product!=null){
+				this.products=this.$route.params.product;
+			}
+			
 			console.log(this.$route)
 			console.log(this.$router)
 		},
 		 methods: {
-      search() {
-				axios.get(this.serveRoot + "/index.php/api/index/searchProduct?keyword=" + this.keyword).then(res => {
-					console.log(res);
-					this.products = res.data;
-
-				}).catch(err => {});
-				
+		 	search(val){
+				this.products = val;	
 			}
-	}}
+		 },
+		 	
+		 	
+		 	
+//		 	search() {
+//				axios.post(this.serveRoot + "/index.php/api/index/searchProduct", qs.stringify({
+//					keyword: this.keyword,
+//					id:123,
+//					order:456
+//				})).then(res => {
+//					console.log(res);
+//					this.products = res.data;
+//				}).catch(err => {});
+//			}
+//		},
+//    search() {
+////				axios.get(this.serveRoot + "/index.php/api/index/searchProduct?keyword=" + this.keyword).then(res => {
+//				axios.get(this.serveRoot + "/index.php/api/index/searchProduct",qs.stringify({
+//					keyword:this.keyword,
+//					id:123,
+//					order:456
+//				}).then(res => {
+//					console.log(res);
+//					this.products = res.data;
+//
+//				}).catch(err => {});
+//			}
+//	}
+		 }
 </script>
 
 <style>
+.search-bar {
+		border-bottom: solid 1px #CCCCCC;
+	}
 .product img {
 	border: 0 none;
 	vertical-align: top;

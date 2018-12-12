@@ -2,7 +2,7 @@
 	<footer>
 		<ul>
 			<li v-for="(item,index) in botomnav">
-				<router-link :to="item.to">
+			<router-link :to="item.to">
 			<span class="fa" :class="item.icon"></span>
 			<span class="title" v-text="item.title"></span>
 			</router-link>

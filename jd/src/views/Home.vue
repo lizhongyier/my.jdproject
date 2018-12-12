@@ -21,7 +21,7 @@
 	import Swiper from "@/components/Swiper.vue";
 	import QuickNav from "@/components/QuickNav.vue";
 	import ProductList from "@/components/ProductList.vue";
-	
+	import qs from "qs"
 	
 	
 //	import QuickNav from "@/components/QuickNav.vue";

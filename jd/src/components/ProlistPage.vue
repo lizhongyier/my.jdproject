@@ -2,21 +2,20 @@
 	<div class="prolist_page">
 		<search-bar></search-bar>
 		<ul class="prolist_head">
-			<li><a href="#" @click.prevent="menuShow=!menuShow">综合</a><i class="caret"></i>
-			
+			<li><a to="#" @click.prevent="menuShow=!menuShow">综合</a><i class="caret"></i>
 			</li>
-			<li>销量<i class="caret"></i></li>
-			<li>服务<i class="caret"></i></li>
-			<li>筛选<i class="fa fa-filter"></i></li>
+			<li><a href="#" @click.prevent="menuShow=!menuShow">销量</a><i class="caret"></i></li>
+			<li><a href="#" @click.prevent="menuShow=!menuShow">服务</a><i class="caret"></i></li>
+			<li><a href="#" @click.prevent="menuShow=!menuShow">筛选</a><i class="fa fa-filter"></i></li>
 		</ul>
 		<ul class="menu_lister" v-show="menuShow">
-				<li>家电</li>
-				<li>服装</li>
-				<li>护肤</li>
-				<li>玩具</li>
-				<li>食品</li>
-			</ul>	
-			<div class="head_masker" v-show="menuShow" @click="menuShow=false">	</div>
+			<li>家电</li>
+			<li>服装</li>
+			<li>护肤</li>
+			<li>玩具</li>
+			<li>食品</li>
+		</ul>	
+		<!--<div class="head_masker" v-show="menuShow" @click="menuShow=false"></div>-->
 
 		<ul class="prolist_sorts">
 			<li><span></span></li>
@@ -79,7 +78,12 @@
 	.prolist_page{
 		overflow-y: auto;
 	}
-	
+	.prolist_page .prolist_head a{
+		color: #333333;
+	}
+	.prolist_page .prolist_head a:hover {
+		color: #f23030;
+	}
 	.prolist_page .search-bar{
 		background-color: red;
 	}

@@ -10,7 +10,7 @@
 		<div class="user">
 			<span class="fa fa-user"></span>
 		</div>
-		<search-page v-model="show"></search-page>
+		<search-page v-model="show" @search="search"></search-page>
 	</div>
 
 </template>
@@ -29,7 +29,10 @@
 			};
 		},
 		methods:{
-			
+			search(val){
+				console.log(val);
+				this.$router.push({name:'search',params:{product:val}});
+			}
 		},
 		watch:{},
 		computed:{},
@@ -70,7 +73,9 @@
 		line-height: 44px;
 		text-align: center;
 	}
-	
+	.search-bar{
+		color: #666666;
+	}
 	.search-bar .search {
 		padding-top: 7px;
 	}

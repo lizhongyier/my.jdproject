@@ -5,10 +5,10 @@
 				<a href="#" @click.prevent="hide"><i class="fa fa-angle-left"></i> </a>
 			</div>
 			<div class="search weui-flex__item">
-			<input type="search" placeholder="请输入搜索内容"/>
+			<input type="search" v-model="keyword" placeholder="请输入搜索内容"/>
 			</div>
 			<div class="menu" style="width: 60px; margin: 0 8px;">
-				<a>搜索</a>
+				<a @click="search">搜索</a>
 			</div>	
 		</header>
 	</div>
@@ -16,11 +16,14 @@
 </template>
 
 <script>
+	import axios from "axios"
+	import qs from "qs"
 	
 	export default{
 		data(){
 			return{
-				show:false
+				show:false,
+				keyword: ''
 			}
 		},
 		props:["value"],
@@ -42,8 +45,19 @@
 				this.show=false;
 				this.$emit("input",false);
 				document.body.style.overflow="auto";
+			},
+				search() {
+				axios.post(this.serveRoot + "/index.php/api/index/searchProduct", qs.stringify({
+					keyword: this.keyword,
+					id:123,
+					order:456
+				})).then(res => {
+					this.hide();
+					this.$emit('search', res.data);
+				}).catch(err => {});
 			}
 		}
+		
 	}
 	
 </script>
