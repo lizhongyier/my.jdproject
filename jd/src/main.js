@@ -10,7 +10,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 
 //设置服务器地址
-Vue.prototype.serveRoot = "http://192.168.1.29:8888";
+Vue.prototype.serveRoot = "http://api.niyinlong.com";
 
 Vue.use(ElementUI)
 import 'bootstrap/dist/css/bootstrap.min.css'
