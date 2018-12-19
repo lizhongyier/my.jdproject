@@ -29,11 +29,13 @@
 				}, {
 					title: "购物车",
 					icon: "fa-shopping-cart",
-					to:"/cart"
+//					to:"/cart"
+					to:"/cartlogin"
 				}, {
 					title: "用户",
 					icon: "fa-user",
-					to:"/admin"
+//					to:"/admin"
+					to:"/adminlogin"
 				}, ]
 			}
 		}

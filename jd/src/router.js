@@ -30,6 +30,8 @@ import AfterSale from './components/AfterSale.vue'
 import Address from './components/Address.vue'
 import Manngepass from './components/Manngepass.vue'
 import Prolist from './views/Prolist.vue'
+import CartLogin from './views/CartLogin.vue'
+import AdminLogin from './views/AdminLogin.vue'
 
 Vue.use(Router)
 
@@ -65,6 +67,16 @@ const router = new Router({
 			path: '/prolist',
 			name: 'prolist',
 			component: Prolist
+		},
+		{
+			path: '/adminlogin',
+			name: 'adminlogin',
+			component: AdminLogin
+		},
+		{
+			path: '/cartlogin',
+			name: 'cartlogin',
+			component: CartLogin
 		},
 
 		{
