@@ -82,7 +82,8 @@
 	
 	.toparea .slot {
 		flex: 1;
-		font: 28px "微软雅黑";
+		font: 20px "微软雅黑";
+		line-height: 44px;
 	}
 	
 	.toparea .go_back,

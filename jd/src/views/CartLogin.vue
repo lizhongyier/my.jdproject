@@ -1,16 +1,23 @@
 <template>
 	<div class="cart_login">
-	<h2>catlogin</h2>
+		<shoppingcartop>购物车</shoppingcartop>
+		<cartlogmiddle></cartlogmiddle>
+		<product-list></product-list>
 	<footerbar></footerbar>
 	</div>
 </template>
 
 <script>
-	import Footerbar from "@/components/Footerbar.vue"
+	import Footerbar from "@/components/Footerbar.vue";
+	import Shoppingcartop from "@/components/Shoppingcartop.vue";
+	import Cartlogmiddle from "@/components/Cartlogmiddle.vue";
+	import ProductList from "@/components/ProductList.vue";
 	export default{
 		components:{
-			Footerbar
-			
+			Footerbar,
+			Shoppingcartop,
+			Cartlogmiddle,
+			ProductList
 		}
 	}
 </script>

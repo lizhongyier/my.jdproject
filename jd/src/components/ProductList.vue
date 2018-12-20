@@ -58,6 +58,10 @@
 </script>
 
 <style>
+.product_box{
+	width: 100%;
+	padding: 10px;
+}
 .product img {
 	border: 0 none;
 	vertical-align: top;
