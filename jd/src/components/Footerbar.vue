@@ -29,15 +29,35 @@
 				}, {
 					title: "购物车",
 					icon: "fa-shopping-cart",
-//					to:"/cart"
-					to:"/cartlogin"
+					to:"/cart"
+//					to:"/cartlogin"
 				}, {
-					title: "用户",
+					title: "未登录",
 					icon: "fa-user",
-//					to:"/admin"
-					to:"/adminlogin"
+					to:"/admin"
+//					to:"/adminlogin"
 				}, ]
 			}
+		},computed:{
+			login(){
+				return this.$store.state.user.login;
+			}
+		},
+		watch:{
+			login(val){
+				console.log(val);
+				if (val) {
+					this.botomnav[4].title="我的";
+				} else{
+					this.botomnav[4].title="未登录";
+				}
+			}
+		},
+		created(){
+			if (this.login) {
+				this.botomnav[4].title="我的";
+			}
+			console.log(this.login);
 		}
 	}
 </script>

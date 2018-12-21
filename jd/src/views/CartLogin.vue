@@ -13,11 +13,24 @@
 	import Cartlogmiddle from "@/components/Cartlogmiddle.vue";
 	import ProductList from "@/components/ProductList.vue";
 	export default{
+		data(){
+			return{}
+		},
 		components:{
 			Footerbar,
 			Shoppingcartop,
 			Cartlogmiddle,
 			ProductList
+		},
+		props:{
+		},
+		methods:{
+		},
+		computed:{
+		login(){return this.$store.state.user.login},
+		},
+		watch(val){
+			console.log(val)
 		}
 	}
 </script>

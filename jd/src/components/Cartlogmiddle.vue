@@ -3,7 +3,8 @@
 		<div class="cart">
 			<img src="../../public/img4/cart2.png"/>
 			<p>登录后可同步购物车商品</p>
-			<a href="#" @click="pageto">登录</a>
+			<!--给予要去的路径和来自于哪儿，以便根据来自哪里在登录后再去往哪里-->
+			<router-link :to="{path:'/adminlogin',query:{from:'/cart'}}">登录</router-link>
 		</div>
 		<ul>
 			<li class="title"><span>新用户福利<i class="fa fa-circle"></i>专属优惠礼包</span><a>一键领取</a></li>
@@ -22,9 +23,6 @@
 			return{}
 		},
 		methods:{
-			pageto(){
-				this.$router.push("/adminlogin");
-			}
 		}
 		
 	}

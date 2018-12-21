@@ -15,6 +15,26 @@
 </template>
 
 <script>
+	export default{
+		data(){
+			return{}
+		},
+		computed: {
+			login() {
+				return this.$store.state.user.login;
+			}
+		},created(){
+			//如果未登录则提供登录页面/adminlogin,及来自于哪里
+			if(!this.login) {
+				this.$router.push({
+					path:'/adminlogin',
+					query:{
+						from: '/admin'
+					}
+				});
+			}
+		}
+	}
 </script>
 
 <style>
