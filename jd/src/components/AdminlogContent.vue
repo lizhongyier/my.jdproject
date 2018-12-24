@@ -72,7 +72,7 @@
 					// 控制登录后该去的地方
 					switch(this.from){
 								case '/cart':this.$router.push('/cart');break;
-								case '/admin':this.$router.push('/admin');break;
+								case '/adminlogin':this.$router.push('/admin');break;
 								default:this.$router.push('/');break;
 						};
 					this.$router.push('/')};

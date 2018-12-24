@@ -34,8 +34,8 @@
 				}, {
 					title: "未登录",
 					icon: "fa-user",
-					to:"/admin"
-//					to:"/adminlogin"
+//					to:"/admin"
+					to:"/adminlogin"
 				}, ]
 			}
 		},computed:{
@@ -56,6 +56,7 @@
 		created(){
 			if (this.login) {
 				this.botomnav[4].title="我的";
+				this.botomnav[4].to="/admin";
 			}
 			console.log(this.login);
 		}

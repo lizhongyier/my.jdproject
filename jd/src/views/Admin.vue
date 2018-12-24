@@ -27,9 +27,9 @@
 			//如果未登录则提供登录页面/adminlogin,及来自于哪里
 			if(!this.login) {
 				this.$router.push({
-					path:'/adminlogin',
+					path:'/admin',
 					query:{
-						from: '/admin'
+						from: '/adminlogin'
 					}
 				});
 			}
