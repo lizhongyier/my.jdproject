@@ -1,5 +1,5 @@
 <template>
-
+   <div class="sswiper">
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
@@ -16,6 +16,7 @@
 			</div>
 		</div>
 		<div class="swiper-pagination"></div>
+	</div>
 	</div>
 
 </template>
@@ -45,13 +46,13 @@ import Swiper from "swiper"
 	@import url("../assets/css/swiper.css");
 	/*轮播图*/
 	
-	.swiper-container {}
+	.sswiper .swiper-container {}
 	
-	.swiper-container a {
+	.sswiper .swiper-container a {
 		display: block;
 	}
 	
-	.swiper-container img {
+	.sswiper .swiper-container img {
 		width: 100%;
 	}
 </style>
