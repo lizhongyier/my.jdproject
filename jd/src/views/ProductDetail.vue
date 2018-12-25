@@ -1,20 +1,23 @@
 <template>
 	<div class="pro_detail">
 		<shoppingcartop>
-			<router-link :to="'/product/'+id+'/goods'"><span class="sorts">商品</span></router-link>
-			<router-link :to="'/product/'+id+'/detail'"><span class="sorts">详情</span></router-link>
-			<router-link :to="'/product/'+id+'/comment'"><span class="sorts">评价</span></router-link>
-			<router-link :to="'/product/'+id+'/recommend'"><span class="sorts">推荐</span></router-link>
+			<div class="protitle">
+				
+			</div>
 		</shoppingcartop>
-		<router-view/>
+		<goods></goods>
+		
+		<buy-foot></buy-foot>
 	</div>
 	
 </template>
 
 <script>
 	import Shoppingcartop from "@/components/Shoppingcartop.vue"
+	import Goods from "@/components/Goods.vue"
+	import BuyFoot from "@/components/BuyFoot.vue"
 	export default{
-		components:{Shoppingcartop},
+		components:{Shoppingcartop,Goods,BuyFoot},
 		data(){
 			return{
 			id:0,}
