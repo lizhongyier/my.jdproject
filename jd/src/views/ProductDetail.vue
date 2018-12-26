@@ -24,8 +24,8 @@
 			</ul>
 		
 		</div>
-		<div id="recommend" ref="recommend" style="height: 600px;background-color: cadetblue;">
-			<!--<reco-swiper></reco-swiper>-->
+		<div id="recommend" ref="recommend">
+			<reco-swiper></reco-swiper>
 			
 		</div>
 		<div id="detail" ref="detail" >
@@ -47,13 +47,13 @@
 	import Shoppingcartop from "@/components/Shoppingcartop.vue"
 	import Goods from "@/components/Goods.vue"
 	import BuyFoot from "@/components/BuyFoot.vue"
-//	import RecoSwiper from "@/components/RecoSwiper.vue"
+	import RecoSwiper from "@/components/RecoSwiper.vue"
 	export default {
 		components: {
 			Shoppingcartop,
 			Goods,
 			BuyFoot,
-//			RecoSwiper
+			RecoSwiper
 		},
 		data() {
 			return {
@@ -107,7 +107,7 @@
 		font-weight: bold;
 		padding-left: 13px;
 		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYBAMAAAABjmA/AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAnUExURek7PUdwTO49Peg6Peo6Puc6Pek6POk6POg6POg7PeY8POg6POk6PApBjXgAAAANdFJOU/8ADttQPYvEqJYqW/KuifCQAAAAjklEQVQI10XOsRGCQBAF0D8eA6Imn4ERMh0tgDE2UDqgA2Ij7UA6gA6MjCnB0vzLBlxw92Z379+B/F7DgwQraI3C05AQc0ElfBCac40NOlzIE2LUuJM5gtpHMtPxc+yW1tuH15j8+hYHD1yhdPQoHO3yKG+GSNgbXsI81AocgNS+qlgLFwrrGNjFdFS9tj82HhIeoIR1QQAAAABJRU5ErkJggg==) no-repeat 0;
-		background-size: 8px;
+		background-size: 10px;
 	}
 	#comment{
 		padding:45px 0px 0px 0px;

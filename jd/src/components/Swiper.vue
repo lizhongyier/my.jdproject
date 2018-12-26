@@ -1,6 +1,6 @@
 <template>
    <div class="sswiper">
-	<div class="swiper-container">
+	<div class="swiper-container" >
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<img src="../assets/images/swiper_1.jpg">
@@ -31,9 +31,9 @@ import Swiper from "swiper"
 		created() {},
 		mounted() {
 //			console.log("初始化轮播图！");
-			new Swiper('.swiper-container', {
+			var swiper=new Swiper('.sswiper .swiper-container', {
 				pagination: {
-					el: '.swiper-pagination',
+					el: '.sswiper .swiper-pagination',
 				},
 				autoplay: true
 			});
