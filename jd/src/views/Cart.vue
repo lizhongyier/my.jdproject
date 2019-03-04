@@ -3,7 +3,7 @@
 		<shoppingcartop>购物车</shoppingcartop>
 		<!--v-if,满足条件即显示-->
 		<cart-login  v-if="!login"></cart-login>
-		<shoppingcarbody  v-if="login"></shoppingcarbody>
+		<shoppingcarbody v-if="login"></shoppingcarbody>
 		<footerbar></footerbar>
 	</div>
 </template>
